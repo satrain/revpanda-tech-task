@@ -1,3 +1,14 @@
 <?php
+// run this file when first running the application so all necessary databases and tables will be created
+include 'includes/class-autoload.inc.php';
 
-//create database and its tables by running this file
+$dbh = new Dbh();
+
+// create DB
+$dbh->createDb();
+
+// connect to DB
+$dbh->connect();
+
+// create tables
+$dbh->createTables();

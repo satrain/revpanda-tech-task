@@ -1,11 +1,15 @@
 <?php
 
-class Result {
+class Result extends Dbh {
 
     public $button_id;
 
     function __construct($id) {
         $this->button_id = $id;
+    }
+
+    private function fetchDataButtonOne() {
+
     }
 
     public function showResult() {
