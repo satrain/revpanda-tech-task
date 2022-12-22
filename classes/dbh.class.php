@@ -2,18 +2,11 @@
 
     class Dbh {
 
-        private $host;
-        private $user;
-        private $pass;
-        private $dbName;
+        private $host = 'localhost';
+        private $user = 'root';
+        private $pass = '';
+        private $dbName = 'revpanda';
         private $conn;
-
-        function __construct() {
-            $this->host = 'localhost';
-            $this->user = 'root';
-            $this->pass = '';
-            $this->dbName = 'revpanda';
-        }
 
         public function connect() {
             $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
